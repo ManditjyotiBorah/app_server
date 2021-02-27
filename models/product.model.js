@@ -30,13 +30,15 @@ const offer_schema = new mongoose.Schema({
     required: true,
   },
   spec: {
-    type: String,
-    required: true,
-  },
-  percentage: {
-    type: Number,
-    default: null,
-    required: true,
+      value: {
+          type: Mixed,
+          required: true
+      },
+      specType: {
+          type: Number,
+          enum: [1, 2],
+          required: true
+      }
   },
 });
 
@@ -51,11 +53,11 @@ const product_schema = new mongoose.Schema({
   },
   price: {
     required: true,
-    priceValue: {
+    amount: {
       type: Number,
       required: true,
     },
-    priceCurrency: {
+    currency: {
       type: String,
       enum: ["USD", "INR", "EUR"],
       required: true,
