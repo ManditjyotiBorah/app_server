@@ -11,10 +11,10 @@ app.use(express.urlencoded({extended:true}));
 //add routes below
 
 const sellerRoute = require('./routes/seller.route')
-app.use('', sellerRoute)
+app.use('/seller', sellerRoute)
 
 const productRoute = require('./routes/product.route')
-app.use('',productRoute)
+app.use('/product',productRoute)
 
 
 //connection
