@@ -1,0 +1,24 @@
+{
+  "name": "app_server",
+  "version": "1.0.0",
+  "description": "server for RN app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManditjyotiBorah/app_server.git"
+  },
+  "author": "Manditjyoti Borah , Pranjal Dahal , Abhilekh Deka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManditjyotiBorah/app_server/issues"
+  },
+  "homepage": "https://github.com/ManditjyotiBorah/app_server#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18"
+  }
+}
