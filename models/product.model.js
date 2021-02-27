@@ -30,15 +30,15 @@ const offer_schema = new mongoose.Schema({
     required: true,
   },
   spec: {
-      value: {
-          type: Mixed,
-          required: true
-      },
-      specType: {
-          type: Number,
-          enum: [1, 2],
-          required: true
-      }
+    value: {
+      type: Mixed,
+      required: true,
+    },
+    specType: {
+      type: Number,
+      enum: [1, 2],
+      required: true,
+    },
   },
 });
 
@@ -48,6 +48,10 @@ const product_schema = new mongoose.Schema({
     required: true,
   },
   description: {
+    type: String,
+    required: true,
+  },
+  category: {
     type: String,
     required: true,
   },
@@ -63,8 +67,8 @@ const product_schema = new mongoose.Schema({
       required: true,
     },
   },
-  availibilty: {
-    type: Number,
+  availibility: {
+    type: Mixed,
     default: null,
     required: true,
   },
