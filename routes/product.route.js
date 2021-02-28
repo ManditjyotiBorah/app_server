@@ -42,14 +42,13 @@ router.post("/add-products", (req, res) => {
     .catch((err) => res.send(err));
 });
 
-
-
-
 router.post("/show-products-added", (req, res) => {
   product
     .find({ seller: req.body.seller })
     .then((data) => res.send(data))
     .catch((err) => res.send(err));
 });
+
+
 
 module.exports = router;

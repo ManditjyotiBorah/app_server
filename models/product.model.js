@@ -31,7 +31,7 @@ const offer_schema = new mongoose.Schema({
   },
   spec: {
     value: {
-      type: Mixed,
+      type: mongoose.Schema.Types.Mixed,
       required: true,
     },
     specType: {
@@ -56,7 +56,6 @@ const product_schema = new mongoose.Schema({
     required: true,
   },
   price: {
-    required: true,
     amount: {
       type: Number,
       required: true,
@@ -68,8 +67,8 @@ const product_schema = new mongoose.Schema({
     },
   },
   availibility: {
-    type: Mixed,
-    default: null,
+    type: mongoose.Schema.Types.Mixed,
+    default: "NA",
     required: true,
   },
   image: [
@@ -89,15 +88,12 @@ const product_schema = new mongoose.Schema({
   },
   brand: {
     type: String,
-    default: null,
   },
   rating: {
     type: rating_schema,
-    required: false,
   },
   offer: {
     type: offer_schema,
-    required: false,
   },
 });
 module.exports = mongoose.model("product_details", product_schema);
